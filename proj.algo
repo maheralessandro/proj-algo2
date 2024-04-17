@@ -1,0 +1,16 @@
+ALGORITHM proj2
+VAR
+    tab : ARRAY_OF INTEGER[];
+    i,j , aux: INTEGER ;
+
+BEGIN
+    FOR i FROM 0 TO tab.length -1 STEP step  DO
+        FOR j FROM 0 TO tab.length - i - 1 STEP step  DO
+            IF (tab[j]>tab[j+1]) THEN
+                aux := tab[j+1];
+                tab[j+1] := tab[j];
+                tab[j]:= aux
+            END_IF
+        END_FOR
+    END_FOR
+END
